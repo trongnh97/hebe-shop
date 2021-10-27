@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--================ start header ==================-->
+    <header>
+        <div class="navbar-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">
+                                <img src="img/logo.png" alt="logo">
+                            </a>
+                            <form action="#" method="post">
+                                <input type="search" class="form-control" placeholder="Search...">
+                            </form>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+                                <img src="img/menu.png" alt="navbar mobile">
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarMobile">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">SHOP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">ELEMENT</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">PAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">BLOG</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">MEGAMENU</a>
+                                    </li>
+                                </ul>
+                                <div class="personal ms-auto d-flex">
+                                    <div class="currency">
+                                        <img src="img/exchange.png" alt="currency">
+                                        <select class="money" name="currency">
+                                            <option>USD</option>
+                                            <option>EUR</option>
+                                            <option>GPB</option>
+                                        </select>  
+                                    </div>
+                                    <button class="user" type="button" data-bs-toggle="modal" data-bs-target="#ModalUser">
+                                        <img src="img/user.png" alt="user">
+                                    </button>
+                                    <button class="shopping position-relative" type="button" data-bs-toggle="modal" data-bs-target="#ModalShopping">
+                                        <img src="img/shopping-cart.png" alt="gio hang">
+                                        <span id="badge-Sp-cart" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Modal shopping cart -->
+                            <div class="modal fade" id="ModalShopping" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal Shopping</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row row-title">
+                                                <div class="col-5">
+                                                    <div class="title-cart-product">
+                                                        <h6>Sản phẩm</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="title-cart-product">
+                                                        <h6>Giá</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="title-cart-product">
+                                                        <h6>Số lượng</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart-items mt-3">
+                                                <!-- <div class="row mt-3 row-item">
+                                                    <div class="col-5 cart-item">
+                                                        <img class="cart-item-img" src="img/aococ.png" alt="">
+                                                        <span class="cart-item-title">ao coc</span>
+                                                    </div>
+                                                    <div class="col-3 cart-price">
+                                                        12
+                                                    </div>
+                                                    <div class="col-4 d-flex cart-quantity">
+                                                        <input class="cart-quantity-input form-control" type="number" value="1">
+                                                        <button class="btn btn-danger" type="button">Xóa</button>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="cart-total text-end mt-3">
+                                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                                <span class="cart-total-price"></span>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary order">Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end modal shopping cart -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--================ end header ==================-->
+    <!--================ start banner ==================-->
+    <section>
+        <div class="banner">
+            <div class="content">
+                <h1>Shop</h1>
+                <p>Home > Shop</p>
+            </div>
+        </div>
+    </section>
+    <!--================ end banner ==================-->
+    <!--================ start shopping  ==================-->
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" id="shop-slider">
+                    <div class="categories">
+                        <div class="title d-flex">
+                            <i class="fas fa-bars"></i>
+                            <h6>Categories</h6>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              New
+                            </button>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Women
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Áo</a></li>
+                              <li><a class="dropdown-item" href="#">Khăn</a></li>
+                              <li><a class="dropdown-item" href="#">Trang sức</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Men
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Áo</a></li>
+                              <li><a class="dropdown-item" href="#">Quần</a></li>
+                              <li><a class="dropdown-item" href="#">Giày</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Girls
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Son</a></li>
+                              <li><a class="dropdown-item" href="#">Kem dưỡng da</a></li>
+                              <li><a class="dropdown-item" href="#">Giày</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Boys
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Mũ</a></li>
+                              <li><a class="dropdown-item" href="#">Giày</a></li>
+                              <li><a class="dropdown-item" href="#">Đồng hồ</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <i class="fas fa-hand-point-right"></i>
+                            <button class="btn dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Plus size
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">L</a></li>
+                              <li><a class="dropdown-item" href="#">M</a></li>
+                              <li><a class="dropdown-item" href="#">S</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="color mt-5">
+                        <h5>COLOR</h5>
+                        <div class="content d-flex">
+                            <div class="div-color">
+                                <div class="red square-color"></div>
+                                <div class="icon-color">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="div-color">
+                                <div class="blue square-color"></div>
+                                <div class="icon-color">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="div-color">
+                                <div class="green square-color"></div>
+                                <div class="icon-color">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="div-color">
+                                <div class="black square-color"></div>
+                                <div class="icon-color">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="div-color">
+                                <div class="yellow square-color"></div>
+                                <div class="icon-color">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="range-slider mt-5">
+                        <h5>PRICE</h5>
+                        <div class="p-3">
+                            <input type="range" min="1" max="5000" value="5000" class="w-100" id="myRange">
+                            <p>Price:$ <span id="demo-text-range"></span></p>
+                        </div>
+                    </div>
+                    <div class="size mt-5">
+                        <h5>SIZE</h5>
+                        <div class="p-3 content">
+                            <div class="size-s size-circle"><span>S</span></div>
+                            <div class="size-m size-circle"><span>M</span></div>
+                            <div class="size-l size-circle"><span>L</span></div>
+                            <div class="size-xl size-circle"><span>XL</span></div>
+                            <div class="size-xxl size-circle"><span>XXL</span></div>
+                        </div>
+                    </div>
+                    <div class="price mt-5">
+                        <h5>PRICE</h5>
+                        <div class="content">
+                            <a href="">None</a>
+                            <a href="">Popularity</a>
+                            <a href="">Average</a>
+                            <a href="">Newness</a>
+                            <a href="">Price: low to high</a>
+                            <a href="">Price: high to low</a>
+                        </div>
+                    </div>
+                    <div class="div-img mt-5 position-relative">
+                        <img src="img/man.png" alt="">
+                        <div class="title">
+                            <p>SPRING</p>
+                            <h4>COLLECTION</h4>
+                            <button type="button" class="btn btn-dark">SHOP NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 mt-5" id="shop-content">
+                    <div class="filter-div d-flex justify-content-between align-items-center">
+                        <div class="img-filter d-flex">
+                            <img src="img/filter.png" alt="">
+                            <h6>FILTER</h6>
+                        </div>
+                        <div class="arrange">
+                            <i class="fas fa-circle"></i>
+                            <select name="" id="">
+                                <option selected value="">Sắp xếp</option>
+                                <option value="">Phổ biến nhất</option>
+                                <option value="">Mua nhiều nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row products mt-4">
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/khan.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Khăn</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/aococ.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Áo phông</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/aokhoac.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Áo khoác(xanh)</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/aothun.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Áo thun</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/balo.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Balo</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/binhnuoc.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Bình nước gốm truyền thống</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/giay.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Giày vải(xanh)</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/noName.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Trụ nến</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/quan.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Quần âu</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/yellowCoat.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Áo khoác vàng</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/Collectionpage.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Giày vải(xám)</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 position-relative product">
+                            <div class="icons position-absolute">
+                                <i  class="fas fa-heart heart-click"></i>
+                                <i class="fas fa-search"></i>
+                                <button type="button" class="btn-add-cart">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <div class="div-img mb-3">
+                                <img class="img-product" src="img/vi.png" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="title-product">Sổ tay</h5>
+                                <p class="price"> 320</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="next-page">
+                        <a class="btn-next-page" href="#" role="button">1</a>
+                        <a class="btn-next-page" href="#" role="button">2</a>
+                        <a class="btn-next-page" href="#" role="button">3</a>
+                        <a class="btn-next-page" href="#" role="button">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ end shopping ==================-->
+    <!--================ start footer ==================-->
+    <footer>
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>COMPANY</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">Our Story</a>
+                                </li>
+                                <li>
+                                    <a href="#">Eureka</a>
+                                </li>
+                                <li>
+                                    <a href="#">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#">Thinkers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>INFORMATION</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                                <li>
+                                    <a href="#">Feedback</a>
+                                </li>
+                                <li>
+                                    <a href="#">Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#">Press</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 logo-footer">
+                    <img src="img/logo.png" alt="logo">
+                    <h4>hebe</h4>
+                    <p>MINIMAL SHOP</p>
+                </div>
+                <div class="col-lg-4 text-center contact">
+                    <h6>Don't miss out on the latest</h6>
+                    <p>Get notified of new products, limited, and more</p>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email address">
+                        <button type="button" class="btn btn-warning mt-3">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row copyright pb-3 pt-3 align-items-center">
+                <div class="col-lg-4 d-flex social-media">
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                </div>
+                <div class="col-lg-4 mt-3 d-flex align-items-baseline copyright-logo">
+                    <i class="far fa-copyright"></i>
+                    <p>2018 Famithemes. All rights reserved</p>
+                </div>
+                <div class="col-lg-4 text-center pay">
+                    <a href="#"><img src="img/logoVisa.png" alt=""></a>
+                    <a href="#"><img src="img/logoPaypal.png" alt=""></a>
+                    <a href="#"><img src="img/logoMaestro.png" alt=""></a>
+                    <a href="#"><img src="img/logoJCB.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================ end footer ==================-->
+    <!--================ ==================-->
+    <!--================ ==================-->
+    <!--================ ==================-->
+
+    <script src="https://kit.fontawesome.com/3244c7c748.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
